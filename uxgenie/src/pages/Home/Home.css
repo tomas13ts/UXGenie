@@ -119,11 +119,12 @@ body, .room, .home {
     background: linear-gradient(135deg, #b9d2df, #e8c2cf, #f3e6e8); /* Gradiente desejado */
     opacity: 50%;
     background-size: 300% 300%;
-    animation: gradientAnimation 15s ease-in-out infinite; /* Animação do gradiente */
-    color: white; /* Cor do texto em cima do gradiente */
+    animation: gradientAnimation 15s ease-in-out infinite;
+    color: white;
     text-align: center;
     z-index: 999; /* Garante que o conteúdo fique sobre o fundo e o gradiente */
     width: 100%; /* Ocupa toda a largura da tela */
+
   }
   
   /* Animação do gradiente */
