@@ -1,0 +1,100 @@
+/* Remove margens e faz a altura ocupar a tela inteira */
+body, .room, .home {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .card{
+  padding: 100px;
+  background-color: rgba(255, 0, 0, 0);
+  border-radius: 25px;
+  border: 1px solid rgb(230, 230, 230);
+
+  }
+.card-secundary{
+    position: relative;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 50px;
+    background: linear-gradient(135deg, #b9d2df6b, #e4a0b8, #f3e6e877);
+    margin: 0;
+}
+.secundary-overlay{
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff00;
+    filter: blur(0px);
+    margin: 0;
+}
+.circle{
+    border-radius: 200px;
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    font-size: 50px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 1000;
+    
+}
+
+  h2{
+    font-size: 5rem;
+    color: white;
+  }
+  
+  /* Estilo da div que contém a imagem de fundo */
+  .room {
+    background-image: url('/public/img/room.jpg'); /* Caminho da imagem */
+    filter: blur(10px);
+    background-size: cover;
+    background-position: center;
+    height: 100%; /* Ocupa toda a altura da tela */
+    position: absolute; /* Fica atrás de outros elementos */
+    width: 100%; /* Ocupa toda a largura da tela */
+    z-index: -1;
+    left: 0;
+    top: 0; /* Garante que fique atrás do conteúdo */
+  }
+  
+  /* Estilo do componente que terá o gradiente */
+  .home {
+    background: linear-gradient(135deg, #b9d2df, #e8c2cf, #f3e6e8); /* Gradiente desejado */
+    opacity: 50%;
+    background-size: 300% 300%;
+    animation: gradientAnimation 15s ease-in-out infinite; /* Animação do gradiente */
+    color: white; /* Cor do texto em cima do gradiente */
+    text-align: center;
+    padding: 20px;
+    z-index: 999; /* Garante que o conteúdo fique sobre o fundo e o gradiente */
+    width: 100%; /* Ocupa toda a largura da tela */
+  }
+  
+  /* Animação do gradiente */
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
