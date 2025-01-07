@@ -9,17 +9,53 @@ body, .room, .home {
     position: relative;
   }
 
-  .card{
-  padding: 100px;
-  background-color: rgba(255, 0, 0, 0);
-  border-radius: 25px;
-  border: 1px solid rgb(230, 230, 230);
+  .card {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0);
+    border-radius: 25px;
+    border: 1px solid rgb(230, 230, 230);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .header-frame{
+    border: 1px solid rgb(230, 230, 230);
+    background-color: rgba(255, 0, 0, 0);
+    width: 400px;
+    height: 50px;
+    position: absolute;
+    border-top: none;
+    border-radius: 0px 0px 50px 50px;
+    top: 10px;
 
+  }
+  
+  
+  .home-page{
+  display: flex;
+  width: 100%;
+  height: calc(100% - 20px);
+  margin: 10px 0px;
+  }
+  .home-default-section{
+    width: 50%;
+  }
+  .home-section{
+    gap: 30px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25%;
+    height: 100%;
   }
 .card-secundary{
     position: relative;
-    width: 600px;
-    height: 600px;
+    width: 90%;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,6 +63,7 @@ body, .room, .home {
     border-radius: 50px;
     background: linear-gradient(135deg, #b9d2df6b, #e4a0b8, #f3e6e877);
     margin: 0;
+    height: 100%;
 }
 .secundary-overlay{
     border-radius: 50px;
@@ -38,6 +75,11 @@ body, .room, .home {
     background-color: #ffffff00;
     filter: blur(0px);
     margin: 0;
+}
+.home-content{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .circle{
     border-radius: 200px;
@@ -55,6 +97,7 @@ body, .room, .home {
 
   h2{
     font-size: 5rem;
+    margin: 0;
     color: white;
   }
   
@@ -80,7 +123,6 @@ body, .room, .home {
     animation: gradientAnimation 15s ease-in-out infinite; /* Animação do gradiente */
     color: white; /* Cor do texto em cima do gradiente */
     text-align: center;
-    padding: 20px;
     z-index: 999; /* Garante que o conteúdo fique sobre o fundo e o gradiente */
     width: 100%; /* Ocupa toda a largura da tela */
   }
